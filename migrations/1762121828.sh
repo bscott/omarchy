@@ -40,8 +40,6 @@ fi
 
 # Update hyprland bindings to use xdg-terminal-exec
 sed -i 's/\$terminal = uwsm-app -- \$TERMINAL/$terminal = uwsm-app -- xdg-terminal-exec/' ~/.config/hypr/bindings.conf
-# Update --working-directory to --dir for xdg-terminal-exec
-sed -i 's/--working-directory=/--dir=/g' ~/.config/hypr/bindings.conf
 
 # Update TERMINAL variable in uwsm config
 sed -i 's/export TERMINAL=.*/export TERMINAL=xdg-terminal-exec/' ~/.config/uwsm/default
